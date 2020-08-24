@@ -18,6 +18,7 @@ class Dropdown extends Component {
             e.nativeEvent.explicitOriginalTarget === e.nativeEvent.originalTarget) {
             return;
         }
+        // this.setState({ show: !this.state.show });
 
     }
     onClickType = (type) => {
@@ -31,7 +32,7 @@ class Dropdown extends Component {
             classForBtn+=' type-selected'
         return (
             <div className="dropdown-container">
-                <button className={classForBtn} id="types" onClick={this.handleToggle} onBlur={this.handleBlur}
+                <button  className={classForBtn} id="types" onClick={this.handleToggle} onBlur={this.handleBlur}
                 >{option}</button>
                 <ul className="dropdown-list" onBlur={this.handleToggle} hidden={!this.state.show}>
                     {

@@ -58,6 +58,9 @@
     color: white;
     background: #4db8ff;
   }
+  .option:focus{
+    outline-color: white;
+  }
   .types{
       height: 35px;
   }
