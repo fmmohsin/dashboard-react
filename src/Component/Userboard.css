@@ -1,0 +1,28 @@
+.user-board{
+    width:calc(100vw - 250px);
+    /* height: calc(100vh - 100px); */
+    padding:20px;
+    position: relative;
+    
+}
+
+.user-board h3{
+    margin-top:10px
+}
+
+.user-board hr{
+    position: relative;
+    width:100%;
+    margin:0;
+    border-top: 1px solid #cdd8db23;
+
+}
+.user{
+    padding-top:10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 450px;
+    width:170px;
+    margin-right:5px;
+}

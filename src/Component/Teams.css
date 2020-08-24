@@ -1,0 +1,42 @@
+.teams{
+    margin:0px;
+}
+.teams h4{
+    margin:0px 10px;
+    padding:20px 5px 10px 5px;
+}
+.teams ul{
+    list-style-type: none;
+    position: relative;
+    margin: 5px auto;
+    padding: 0;
+    width: 95%;
+    height: auto;
+    border: none;
+    background-color: transparent;
+    overflow: auto;
+}
+.teams li{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding:0px 5px;
+    height: 40px;
+    margin: 5px 0;
+    background: #FBFAFF;
+    border-radius: 3px;
+}
+.teams li::after{
+    content: '';
+    border-style: solid;
+    border-width: 39px 0px 0px 5px;
+    border-color: #EFAC20;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-radius: 2px;
+}
+.teams .selected-item{
+    color:white;
+    background: #F4C05B;
+}
