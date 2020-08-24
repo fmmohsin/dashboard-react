@@ -1,28 +1,34 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './Createuser.css'
 
 const Createuser = (props) => {
-    const userDetails = {
+    const [userDetails, setUserDetails] = useState({
         username: '',
         description: ''
-    }
+    });
     const onInputBlur = (event) => {
         if (event.target.id === 'username')
-            userDetails.username = event.target.value
+        setUserDetails({username:event.target.value,description:userDetails.description})
         else if (event.target.id === 'description')
-            userDetails.description = event.target.value
+        setUserDetails({username:userDetails.username,description:event.target.value})
+    }
+
+
+    const onUserCreate=()=>{
+        props.onUserCreate(userDetails)
+        setUserDetails({username:'',description:''})
     }
     return (
         <div className="user-create-card bg-color">
             <span className="flex-col">
                 <label htmlFor='username'>Name</label>
-                <input placeholder='Enter here' type='text' id='username' onBlur={onInputBlur}></input>
+                <input placeholder='Enter here' type='text' id='username' value={userDetails.username} onChange={onInputBlur}></input>
             </span>
             <span className="flex-col">
                 <label htmlFor='description'>Description</label>
-                <textarea id='description' onBlur={onInputBlur}></textarea>
+                <textarea id='description' value={userDetails.description} onChange={onInputBlur}></textarea>
             </span>
-            <button className="create-bg-color" onClick={props.onUserCreate.bind(this, userDetails)}>Create User</button>
+            <button className="create-bg-color" onClick={onUserCreate}>Create User</button>
         </div>
     );
 }

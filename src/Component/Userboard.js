@@ -5,6 +5,7 @@ import * as actionTypes from '../store/actions';
 import User from './User'
 import './Userboard.css'
 const UserBoard = (props) => {
+    
     console.log(props)
     const team = props.teams.filter((team) => props.id === team.id)
     return (
